@@ -12,9 +12,7 @@ from app import app
 
 # =========  Layout  =========== #
 layout = dbc.Col([
-
-
-
+    html.H1('Extratos')
 ], )
 
 # =========  Callbacks  =========== #

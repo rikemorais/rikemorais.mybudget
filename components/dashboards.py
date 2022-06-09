@@ -10,10 +10,10 @@ import calendar
 from app import app
 
 
-# =========  Layout  =========== #
+# Layout
 layout = dbc.Col([
-
+    html.H1('Dashboards')
 ])
 
 
-# =========  Callbacks  =========== #
+# Callbacks
