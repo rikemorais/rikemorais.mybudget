@@ -1,31 +1,25 @@
-import plotly.express as px
-from dash import html, dcc
-from dash.dependencies import Input, Output, State
-import dash_bootstrap_components as dbc
-
 from app import app
-from datetime import datetime, date
-
-import pdb
+from dash import html, dcc
 from dash_bootstrap_templates import ThemeChangerAIO
-
-# ========= DataFrames ========= #
-import numpy as np
-import pandas as pd
+from datetime import datetime, date
+from dash.dependencies import Input, Output, State
 from globals import *
+from components.perfil import *
+import dash_bootstrap_components as dbc
+import numpy as np
+import plotly.express as px
+import pandas as pd
 
 
-# ========= Layout ========= #
+# Layout
 layout = dbc.Card([
     html.H1("Budget", className="text-primary"),
-    html.P("By Henrique Morais", className="text-info"),
+    html.P("By Henrique Morais", className="text-alert"),
     html.Hr(),
 
 
-    # Seção PERFIL ------------------------
-    dbc.Button(id='botao_avatar',
-               children=[html.Img(src="/assets/rikemorais.png", id="avatar_change", alt="Avatar", className='perfil_avatar'),
-                         ], style={'background-color': 'transparent', 'border-color': 'transparent'}),
+    # Seção Perfil
+    avatar(),
 
     dbc.Modal([
         dbc.ModalHeader(dbc.ModalTitle("Selecionar Perfil")),
