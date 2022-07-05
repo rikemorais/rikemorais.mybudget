@@ -2,8 +2,8 @@ import dash_bootstrap_components as dbc
 from dash import html
 
 
-def avatar():
-    button = dbc.Button(id='botao_avatar',
+def perfil_principal():
+    avatar = dbc.Button(id='botao_avatar',
                         children=[html.Img(src="/assets/rikemorais.png",
                                            id="avatar_change",
                                            alt="Avatar",
@@ -11,4 +11,4 @@ def avatar():
                                   ],
                         style={'background-color': 'transparent',
                                'border-color': 'transparent'})
-    return button
+    return avatar

@@ -19,7 +19,7 @@ layout = dbc.Card([
 
 
     # Seção Perfil
-    avatar(),
+    perfil_principal(),
 
     dbc.Modal([
         dbc.ModalHeader(dbc.ModalTitle("Selecionar Perfil")),
